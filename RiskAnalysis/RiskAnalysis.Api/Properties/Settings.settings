@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="DataFilePath" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">D:\Development\Repositories\WHATechChallenge\Data\</Value>
+      <Value Profile="(Default)">C:\Users\tysonwolker\Documents\TechChallenge\Data\</Value>
     </Setting>
     <Setting Name="SettledCsv" Type="System.String" Scope="Application">
       <Value Profile="(Default)">Settled.csv</Value>

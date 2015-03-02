@@ -7,12 +7,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{87D946AE-5910-4C55-9B11-57034D555F63}</ProjectGuid>
+    <ProjectGuid>{A16D1C0A-941E-4A48-8948-2D4E06A4258B}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>RiskAnalysis.Api</RootNamespace>
-    <AssemblyName>RiskAnalysis.Api</AssemblyName>
+    <RootNamespace>RiskAnalysis.Web.UI</RootNamespace>
+    <AssemblyName>RiskAnalysis.Web.UI</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -38,21 +38,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Autofac">
-      <HintPath>..\packages\Autofac.3.5.0\lib\net40\Autofac.dll</HintPath>
-    </Reference>
-    <Reference Include="Autofac.Integration.WebApi">
-      <HintPath>..\packages\Autofac.WebApi2.3.4.0\lib\net45\Autofac.Integration.WebApi.dll</HintPath>
+    <Reference Include="dotless.Core">
+      <HintPath>..\packages\dotless.1.4.2.0\lib\dotless.Core.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Net.Http" />
-    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.Cors">
-      <HintPath>..\packages\Microsoft.AspNet.Cors.5.2.3\lib\net45\System.Web.Cors.dll</HintPath>
-    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -62,13 +51,6 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
-    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.Http.Cors">
-      <HintPath>..\packages\Microsoft.AspNet.WebApi.Cors.5.2.3\lib\net45\System.Web.Http.Cors.dll</HintPath>
-    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -78,43 +60,58 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="System.Web.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.2\lib\net45\System.Web.Razor.dll</HintPath>
     </Reference>
-    <Reference Include="System.Web.Http.WebHost">
-      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.2\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    <Reference Include="System.Web.Webpages">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.2\lib\net45\System.Web.Webpages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Deployment">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.2\lib\net45\System.Web.Webpages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.2\lib\net45\System.Web.Webpages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.2\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.2\lib\net45\System.Web.Mvc.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
+    <Content Include="Resources\js\app.js" />
+    <Content Include="Resources\js\betAnalysis\pageBinding.js" />
+    <Content Include="Resources\js\betAnalysis\services\betAnalysis.js" />
+    <Content Include="Resources\js\betAnalysis\viewModels\betAnalysis.js" />
+    <Content Include="Resources\js\betAnalysis\viewModels\customerBets.js" />
+    <Content Include="Resources\js\bets\viewmodels\bet.js" />
+    <Content Include="Resources\js\libs\jquery-2.1.3.min.js" />
+    <Content Include="Resources\tests\betAnalysis\customerBetsTest.js" />
+    <Content Include="Resources\tests\bets\betTest.js" />
+    <Content Include="Resources\tests\qunit.css" />
+    <Content Include="Resources\tests\qunit.js" />
+    <Content Include="Resources\tests\tests.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Bootstrapper\CompositionRoot.cs" />
-    <Compile Include="Bootstrapper\Dependencies.cs" />
-    <Compile Include="Bootstrapper\Routes.cs" />
-    <Compile Include="Bootstrapper\WebApiConfig.cs" />
-    <Compile Include="Controllers\BetController.cs" />
-    <Compile Include="Controllers\ResultedBetController.cs" />
-    <Compile Include="Dependencies\BetAnalysisModule.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\BetAnalysisController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-      <DependentUpon>Settings.settings</DependentUpon>
-    </Compile>
-    <Compile Include="Services\ConfigurationService.cs" />
-    <Compile Include="Services\DataService.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Views\web.config" />
     <Content Include="packages.config" />
-    <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
+    <Content Include="Views\BetAnalysis\Index.cshtml" />
+    <Content Include="Resources\js\libs\knockout-3.3.0.js" />
+    <Content Include="Resources\js\libs\lodash-3.3.1.js" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -123,25 +120,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="App_Data\" />
     <Folder Include="Models\" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\RiskAnalysis.CompositionRoot\RiskAnalysis.CompositionRoot.csproj">
-      <Project>{300B05D8-BF2F-4DB8-BCAD-3927D228AE98}</Project>
-      <Name>RiskAnalysis.CompositionRoot</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\RiskAnalysis.Domain.Entities\RiskAnalysis.Domain.Entities.csproj">
-      <Project>{3C68F5ED-E46F-488D-AC90-B7147364803B}</Project>
-      <Name>RiskAnalysis.Domain.Entities</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\RiskAnalysis.Domain.Interfaces\RiskAnalysis.Domain.Interfaces.csproj">
-      <Project>{72FDA3C1-FF8A-4949-836B-0CA2CDE9FC35}</Project>
-      <Name>RiskAnalysis.Domain.Interfaces</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\RiskAnalysis.Infrastructure.Interfaces\RiskAnalysis.Infrastructure.Interfaces.csproj">
-      <Project>{1C480476-CF0C-4975-B8D3-1227CE593C22}</Project>
-      <Name>RiskAnalysis.Infrastructure.Interfaces</Name>
-    </ProjectReference>
+    <Folder Include="Resources\css\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -156,9 +137,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>55850</DevelopmentServerPort>
+          <DevelopmentServerPort>61577</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:55850/</IISUrl>
+          <IISUrl>http://localhost:61577/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

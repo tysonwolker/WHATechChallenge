@@ -7,12 +7,12 @@ namespace RiskAnalysis.Api.Services
     {
         public string SettledCsv
         {
-            get { return @WebConfigurationManager.AppSettings["SettledCsv"]; }
+            get { return @Properties.Settings.Default.SettledCsv; }
         }
 
         public string UnsettledCsv
         {
-            get { return @WebConfigurationManager.AppSettings["UnsettledCsv"]; }
+            get { return @Properties.Settings.Default.UnsettledCsv; }
         }
     }
 }

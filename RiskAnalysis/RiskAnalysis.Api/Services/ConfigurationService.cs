@@ -7,7 +7,10 @@ namespace RiskAnalysis.Api.Services
     {
         public string DataFilePath
         {
-            get { return @WebConfigurationManager.AppSettings["DataFilePath"]; }
+            get
+            {
+                return @Properties.Settings.Default.DataFilePath;
+            }
         }
     }
 }

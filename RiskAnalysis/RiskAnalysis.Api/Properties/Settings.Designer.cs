@@ -25,7 +25,7 @@ namespace RiskAnalysis.Api.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("D:\\Development\\Repositories\\WHATechChallenge\\Data\\")]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Users\\tysonwolker\\Documents\\TechChallenge\\Data\\")]
         public string DataFilePath {
             get {
                 return ((string)(this["DataFilePath"]));

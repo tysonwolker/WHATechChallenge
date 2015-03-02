@@ -22,6 +22,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RiskAnalysis.Domain.Interfa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RiskAnalysis.Infrastructure.Interfaces", "RiskAnalysis.Infrastructure.Interfaces\RiskAnalysis.Infrastructure.Interfaces.csproj", "{1C480476-CF0C-4975-B8D3-1227CE593C22}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RiskAnalysis.Web.UI", "RiskAnalysis.Web.UI\RiskAnalysis.Web.UI.csproj", "{A16D1C0A-941E-4A48-8948-2D4E06A4258B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -56,6 +58,10 @@ Global
 		{1C480476-CF0C-4975-B8D3-1227CE593C22}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1C480476-CF0C-4975-B8D3-1227CE593C22}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1C480476-CF0C-4975-B8D3-1227CE593C22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A16D1C0A-941E-4A48-8948-2D4E06A4258B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A16D1C0A-941E-4A48-8948-2D4E06A4258B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A16D1C0A-941E-4A48-8948-2D4E06A4258B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A16D1C0A-941E-4A48-8948-2D4E06A4258B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
