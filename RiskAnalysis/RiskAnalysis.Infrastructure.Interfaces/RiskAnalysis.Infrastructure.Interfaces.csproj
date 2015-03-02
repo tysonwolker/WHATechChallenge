@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{300B05D8-BF2F-4DB8-BCAD-3927D228AE98}</ProjectGuid>
+    <ProjectGuid>{1C480476-CF0C-4975-B8D3-1227CE593C22}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>RiskAnalysis.CompositionRoot</RootNamespace>
-    <AssemblyName>RiskAnalysis.CompositionRoot</AssemblyName>
+    <RootNamespace>RiskAnalysis.Infrastructure.Interfaces</RootNamespace>
+    <AssemblyName>RiskAnalysis.Infrastructure.Interfaces</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,9 +30,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Autofac">
-      <HintPath>..\packages\Autofac.3.5.0\lib\net40\Autofac.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -42,21 +39,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BetAnalysisModule.cs" />
+    <Compile Include="IConfigurationService.cs" />
+    <Compile Include="IDataService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\RiskAnalysis.Domain.Interfaces\RiskAnalysis.Domain.Interfaces.csproj">
-      <Project>{72FDA3C1-FF8A-4949-836B-0CA2CDE9FC35}</Project>
-      <Name>RiskAnalysis.Domain.Interfaces</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\RiskAnalysis.Infrastructure.Data\RiskAnalysis.Infrastructure.Data.csproj">
-      <Project>{AB5EEBFF-D70E-4A50-8639-9BDD14E14580}</Project>
-      <Name>RiskAnalysis.Infrastructure.Data</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

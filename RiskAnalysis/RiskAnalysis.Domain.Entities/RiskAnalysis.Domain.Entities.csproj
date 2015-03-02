@@ -40,7 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bets\Bet.cs" />
-    <Compile Include="Bets\ResultedBet.cs" />
+    <Compile Include="Bets\SettledBet.cs" />
     <Compile Include="Customer.cs" />
     <Compile Include="Event.cs" />
     <Compile Include="Participant.cs" />
